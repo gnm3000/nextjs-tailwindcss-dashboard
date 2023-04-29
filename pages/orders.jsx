@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
 import { BsPersonFill, BsThreeDotsVertical } from 'react-icons/bs'
-import { data } from '../data/data.js'
+//import { data } from '../data/data.js'
+
+
+
+
 import { RiShoppingBagFill } from "react-icons/ri";
 const orders = () => {
+    useEffect(() => { 
+        fetch('/api/data').then(res => res.json()).then((data) => {
+        console.log("data: ", data);
+        setData(data.data)
+    })
+}, [])
+    const [data, setData] = useState([])
+
   return (
      <div className='bg-grey-100 min-h-screen'>
           <div className='flex justify-between p-4'>
@@ -20,7 +32,7 @@ const orders = () => {
                       
                   </div>
                    <ul>
-                      {data.map((order, id) => {
+                      {data && data.length>0 && data.map((order, id) => {
                          return <li key={id} className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grod-cols-3 grid-cols-2 items-center justify-between cursor-pointer'>
                               <div className='flex items-center'>
                                   <div className='bg-purple-100 p-3 rounded-lg ' >
