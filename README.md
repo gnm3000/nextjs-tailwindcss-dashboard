@@ -12,7 +12,11 @@ yarn dev
 pnpm dev
 ```
 ## Screenshots
+![s1](https://github.com/gnm3000/nextjs-tailwindcss-dashboard/assets/1533217/756434b8-aa20-4eae-9c22-56ea536d59bf)
 
+![s2](https://github.com/gnm3000/nextjs-tailwindcss-dashboard/assets/1533217/34d4b731-073d-4960-93ac-4f56be063090)
+
+![s3](https://github.com/gnm3000/nextjs-tailwindcss-dashboard/assets/1533217/ff53816e-a20d-4a3f-a268-b2ce99946dbb)
 
 
 ## More information
